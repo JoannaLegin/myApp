@@ -5,7 +5,7 @@ class Game extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            frameworks: ['aztec_print','moro_khaki','moro_neon','pink_single','tatras','monsters'],
+            frameworks: ['aztec_print','moro_khaki','moro_neon','pink_single','tatras'],
             duplicatedFrameworks: [],
             randomizedFrameworks: [],
             finalizedFrameworks: [],
