@@ -1,6 +1,7 @@
 import React from 'react';
 
 
+
 class Card extends React.Component {
     constructor(props) {
         super(props)
@@ -8,20 +9,24 @@ class Card extends React.Component {
 
         }
     }
-    clicked(format){
-        this.props.click(format)
+    clicked(framework){
+        this.props.click(framework)
     }
     render(){
         return (
-            <div className={"card" + (!this.props.close ? ' opened' : '') + (this.props.complete ? ' matched' : '')} onClick={() => this.clicked(this.props.format)}>
+            <div className={"card" + (!this.props.close ? ' opened' : '') + (this.props.complete ? ' matched' : '')} onClick={() => this.clicked(this.props.framework)}>
                 <div className="front">
-                    <img src={"https://files.fm/thumb_show.php?i=56wh46nnk"}/>
+                        <img src={"https://files.fm/thumb_show.php?i=56wh46nnk"} alt="front-side-photo"/>
+                    </div>
+                    <div className="back">
+                        <img src={"https://raw.githubusercontent.com/JoannaLegin/myApp/main/src/Components/logos/" + this.props.framework + ".jpg" }/>
+                    </div>
                 </div>
-                <div className="back">
-                    <img src={"https://a.allegroimg.com/s128/11e8ad/31b320254d4c9302ac972dab2e14/komin-CHUSTA-wielofunkcyjna-PREZENT-buffa-ZIMOWA" + this.props.format + ".jpg"} alt="images_memory_game"/>
-                </div>
-            </div>
-        )
+            )
+        }
     }
-}
+
 export default Card;
+
+
+
